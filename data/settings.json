@@ -1,0 +1,8 @@
+{
+  "selected_period": "1Y",
+  "grid_columns": 2,
+  "cache_ttl_hours": 24,
+  "last_refresh_at": null,
+  "export_html_snapshot": true,
+  "search_result_limit": 8
+}
