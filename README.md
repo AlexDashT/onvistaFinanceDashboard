@@ -135,6 +135,56 @@ The app will start locally, typically at:
 http://localhost:8501
 ```
 
+## One-file VPS install for Ubuntu
+
+This repository includes a single interactive deployment script:
+
+```bash
+./deploy.sh
+```
+
+The script is designed for Ubuntu VPS deployment and will ask for the values it needs during setup, including:
+
+- domain or subdomain
+- install directory
+- Linux app user
+- git repository URL
+- branch
+- reverse proxy choice
+- whether Playwright Chromium should be installed
+- whether `ufw` should be configured
+
+### Default recommendation
+
+The script defaults to `Caddy`, which is the recommended choice for this project because it is simpler than Nginx and handles HTTPS automatically in the common single-domain VPS case.
+
+### Quick start on a fresh Ubuntu VPS
+
+```bash
+git clone https://github.com/AlexDashT/onvistaFinanceDashboard.git
+cd onvistaFinanceDashboard
+chmod +x deploy.sh
+sudo ./deploy.sh
+```
+
+### What the script does
+
+- installs required Ubuntu packages
+- clones or updates the repository
+- creates a Python virtual environment
+- installs Python dependencies
+- optionally installs Playwright Chromium
+- creates a `systemd` service for Streamlit
+- configures `Caddy` or `Nginx`
+- optionally configures `ufw`
+
+### Important before you run it
+
+- point your domain or subdomain to the VPS first
+- make sure you can use `sudo`
+- for Nginx + Certbot, have an email ready for Let's Encrypt
+- Caddy is the easiest default unless you specifically want Nginx
+
 ## Streamlit pages
 
 - Main dashboard: `app.py`
