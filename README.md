@@ -158,6 +158,8 @@ The script is designed for Ubuntu VPS deployment and will ask for the values it 
 
 The script defaults to `Caddy`, which is the recommended choice for this project because it is simpler than Nginx and handles HTTPS automatically in the common single-domain VPS case.
 
+The deployment script installs Caddy from the official Caddy APT repository on Ubuntu, so you do not need to preinstall it yourself.
+
 ### Quick start on a fresh Ubuntu VPS
 
 ```bash
