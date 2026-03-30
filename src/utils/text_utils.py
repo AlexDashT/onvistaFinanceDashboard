@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-from enum import StrEnum
 import re
+
+from src.utils.compat import StrEnum
 
 ONVISTA_URL_PATTERN = re.compile(r"^https?://(?:www\.)?onvista\.de/.+", re.IGNORECASE)
 ISIN_PATTERN = re.compile(r"^[A-Z]{2}[A-Z0-9]{9}\d$")

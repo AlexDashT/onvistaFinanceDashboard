@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import UTC, datetime
+from datetime import datetime
 import json
 from typing import Any
 
@@ -13,6 +13,7 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_fi
 from src.models import ChartPeriod, ChartPoint, ChartSeries, WatchlistItem
 from src.providers.base import ChartDataUnavailableError, ProviderNetworkError, ProviderParsingError
 from src.services.cache_service import CacheService
+from src.utils.compat import UTC
 from src.utils.logging_utils import get_logger
 
 logger = get_logger(__name__)

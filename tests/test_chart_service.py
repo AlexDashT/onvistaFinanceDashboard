@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
-from datetime import UTC, datetime
+from datetime import datetime
 
 from src.models import ChartPeriod, ChartPoint, ChartSeries, WatchlistItem
 from src.services.chart_service import ChartService
+from src.utils.compat import UTC
 
 
 class _DummyHistoryProvider:

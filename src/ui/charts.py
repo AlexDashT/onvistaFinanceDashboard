@@ -2,13 +2,12 @@
 
 from __future__ import annotations
 
-from itertools import batched
-
 import streamlit as st
 
 from src.models import AppSettings, WatchlistItem
 from src.services.chart_service import ChartService, ChartServiceError, ChartViewModel, format_price_display
 from src.ui.cards import render_empty_state
+from src.utils.compat import batched
 
 
 def render_dashboard_charts(

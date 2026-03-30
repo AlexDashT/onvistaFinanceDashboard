@@ -18,7 +18,7 @@ The current app is intentionally small and local-first. It is structured so it c
 
 ## Tech stack
 
-- Python 3.12+
+- Python 3.10+
 - Streamlit
 - pandas
 - httpx

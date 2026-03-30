@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 from datetime import datetime
-from enum import StrEnum
 import re
 from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+
+from src.utils.compat import StrEnum
 
 ISIN_PATTERN = re.compile(r"^[A-Z]{2}[A-Z0-9]{9}\d$")
 WKN_PATTERN = re.compile(r"^[A-Z0-9]{6}$")
